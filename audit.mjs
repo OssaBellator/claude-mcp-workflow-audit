@@ -35,7 +35,7 @@ function inspect(file,name){
       add('high',file,'possible-secret','Possible hard-coded credential-like value. Rotate if real; move secrets to an approved credential store.');
   }
   if(dangerous.test(text)) add('medium',file,'dangerous-command','Potentially destructive or shell-piped command found. Require narrow scope and explicit approval before consequential execution.');
-  if(wildcard.test(text)) add('medium',file,'wildcard-permission','Possible wildcard tool/permission grant. Prefer least-privilege allowlists.');
+  if(wildcard.test(text) && (name.toLowerCase()==='claude.md' || name.toLowerCase()==='agents.md' || ['.json','.yaml','.yml','.toml'].includes(path.extname(name).toLowerCase()))) add('medium',file,'wildcard-permission','Possible wildcard tool/permission grant. Prefer least-privilege allowlists.');
   if(/mcpServers/i.test(text) && /"command"\s*:/i.test(text) && !/"args"\s*:/i.test(text))
     add('low',file,'mcp-command-review','MCP command configuration found; review executable provenance, arguments, and credential boundary.');
 }
