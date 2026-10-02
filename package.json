@@ -33,12 +33,14 @@
     "validate-plugin.mjs",
     "examples/trades-operations-assistant.md",
     ".claude-plugin/marketplace.json",
-    "capabilities.json"
+    "capabilities.json",
+    "examples/retail-master-pricing.md",
+    "examples/retail-master-pricing.test.mjs"
   ],
   "scripts": {
     "audit": "node audit.mjs .",
     "report": "node report.mjs .",
-    "test": "node validate-plugin.mjs && node test.mjs && node examples/appointment-intake.test.mjs && node plugin.test.mjs",
+    "test": "node validate-plugin.mjs && node test.mjs && node examples/appointment-intake.test.mjs && node plugin.test.mjs && node examples/retail-master-pricing.test.mjs",
     "new-workflow": "node new-workflow.mjs",
     "estimate-scope": "node estimate-scope.mjs",
     "acquisition-baseline": "node acquisition-baseline.mjs",
