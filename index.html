@@ -52,6 +52,9 @@
       <li>The audit establishes the inventory, highest-impact bounded fixes, verification plan, and any separately scoped follow-on implementation.</li>
     </ol>
 
+    <h2>Tested business-workflow reference</h2>
+    <p>The public <a href="https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/examples/appointment-intake.md">synthetic appointment-intake reference</a> demonstrates read-only availability checks, explicit approval or bounded-write modes, duplicate protection, partial-failure recovery, verification evidence, and safe escalation. Its contract test runs in CI. It is a methodology example, not a customer deployment.</p>
+
     <h2>Workflow implementation after the audit</h2>
     <p>If the audit identifies a workflow worth building, implementation can be quoted separately. Typical deliverables include a Claude Skill or scheduled-workflow contract, MCP tool-selection and sequencing rules, client-configurable settings, structured outputs, missing/conflicting-data handling, representative synthetic tests, and maintenance documentation.</p>
     <p><a href="https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/workflow-template.md">See the public workflow implementation template.</a></p>
