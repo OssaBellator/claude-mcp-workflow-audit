@@ -31,7 +31,8 @@
     "acquisition-baseline.mjs",
     "LICENSE",
     "validate-plugin.mjs",
-    "examples/trades-operations-assistant.md"
+    "examples/trades-operations-assistant.md",
+    ".claude-plugin/marketplace.json"
   ],
   "scripts": {
     "audit": "node audit.mjs .",
