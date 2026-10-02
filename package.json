@@ -1,1 +1,24 @@
-{"name":"claude-mcp-audit","private":true,"type":"module","scripts":{"audit":"node audit.mjs .","test":"node test.mjs"}}
+{
+  "name": "claude-mcp-audit",
+  "version": "0.1.0",
+  "description": "Read-only operational audit and Markdown report generator for Claude Code and MCP workspaces",
+  "type": "module",
+  "bin": {
+    "claude-mcp-audit": "./audit.mjs",
+    "claude-mcp-report": "./report.mjs"
+  },
+  "files": ["audit.mjs", "report.mjs", "README.md", "workflow-contract.md", "example-audit.md"],
+  "scripts": {
+    "audit": "node audit.mjs .",
+    "report": "node report.mjs .",
+    "test": "node test.mjs"
+  },
+  "keywords": ["claude-code", "mcp", "model-context-protocol", "ai-agents", "audit", "automation"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OssaBellator/claude-mcp-workflow-audit.git"
+  },
+  "homepage": "https://ossabellator.github.io/claude-mcp-workflow-audit/",
+  "engines": {"node": ">=20"}
+}
