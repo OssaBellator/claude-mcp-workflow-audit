@@ -84,6 +84,20 @@ The repository is a decentralized Claude Code marketplace, so it can be installe
 
 Review the source before installation. The bundled audit Skill is read-first and the deterministic scanner reads target files without mutating the target workspace.
 
+### Data access and removal
+
+This plugin does not bundle or call a remote MCP server and does not send scanned workspace contents to a service operated by this project. The deterministic scanner reads local configuration and text files needed for the audit and writes no changes to the target workspace. Claude itself may process the files and context you choose to make available under your Claude account and product settings.
+
+Do not provide passwords, API keys, private keys, recovery phrases, production customer data, or other secrets to the Skill. Review findings before acting on them.
+
+To remove the decentralized Claude Code install, run:
+
+```text
+/plugin uninstall mcp-workflow-audit@ossabellator-claude-tools
+```
+
+If installed through Claude's Plugins UI, open Customize > Plugins, select the plugin, and choose Remove.
+
 ## Claude plugin / Agent Skill
 
 This repository also packages the audit methodology as a Claude plugin with the `auditing-mcp-workflows` Agent Skill. The Skill is read-first, uses the deterministic scanner as a heuristic, and separates observed evidence from human review.
