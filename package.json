@@ -36,7 +36,12 @@
     "capabilities.json",
     "examples/retail-master-pricing.md",
     "examples/retail-master-pricing.test.mjs",
-    "skills/auditing-mcp-workflows/references/retail-master-pricing.md"
+    "skills/auditing-mcp-workflows/references/retail-master-pricing.md",
+    ".claude/skills/auditing-mcp-workflows/SKILL.md",
+    ".claude/skills/auditing-mcp-workflows/references/appointment-intake.md",
+    ".claude/skills/auditing-mcp-workflows/references/retail-master-pricing.md",
+    ".claude/skills/auditing-mcp-workflows/references/workflow-contract.md",
+    ".claude/skills/auditing-mcp-workflows/scripts/audit.mjs"
   ],
   "scripts": {
     "audit": "node audit.mjs .",
