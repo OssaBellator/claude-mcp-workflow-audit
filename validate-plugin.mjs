@@ -4,12 +4,14 @@ import path from 'node:path';
 const root=path.resolve(process.argv[2]||'.');
 const errors=[],warnings=[];
 const req=f=>{const p=path.join(root,f);if(!existsSync(p))errors.push('missing '+f);return p};
-for(const f of ['.claude-plugin/plugin.json','README.md','LICENSE','skills/auditing-mcp-workflows/SKILL.md']) req(f);
+for(const f of ['.claude-plugin/plugin.json','.claude-plugin/marketplace.json','README.md','LICENSE','skills/auditing-mcp-workflows/SKILL.md']) req(f);
 if(!errors.length){
  let manifest; try{manifest=JSON.parse(readFileSync(path.join(root,'.claude-plugin/plugin.json'),'utf8'))}catch(e){errors.push('invalid plugin.json: '+e.message)}
  if(manifest){
   for(const k of ['name','version','description','author','homepage','repository','license']) if(!manifest[k]) errors.push('plugin.json missing '+k);
   if(manifest.license!=='MIT') warnings.push('manifest license differs from repository MIT expectation');
+  let market; try{market=JSON.parse(readFileSync(path.join(root,'.claude-plugin/marketplace.json'),'utf8'))}catch(e){errors.push('invalid marketplace.json: '+e.message)}
+  if(market){const entry=market.plugins?.find(x=>x.name===manifest.name); if(!entry) errors.push('marketplace.json missing plugin '+manifest.name); else {if(entry.source!=='./') warnings.push('marketplace plugin source is not repository root'); if(entry.version!==manifest.version) errors.push('marketplace/plugin version mismatch');}}
  }
  const readme=readFileSync(path.join(root,'README.md'),'utf8').trim();
  if(readme.split(/\s+/).length<40) errors.push('README should contain at least 40 words');
