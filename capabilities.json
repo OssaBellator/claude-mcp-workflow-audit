@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "provider": "OssaBellator",
+  "positioning": "Claude Code, MCP and AI-agent workflow audit, hardening, testing and bounded implementation",
+  "claims_policy": "Only public repository artifacts are evidence. Synthetic examples are not client deployments.",
+  "evidence": [
+    {
+      "capability": "Claude plugin and Agent Skill packaging",
+      "kind": "public-source",
+      "path": ".claude-plugin/plugin.json"
+    },
+    {
+      "capability": "MCP/agent operational audit",
+      "kind": "public-source",
+      "path": "skills/auditing-mcp-workflows/SKILL.md"
+    },
+    {
+      "capability": "Deterministic static scanner",
+      "kind": "public-source",
+      "path": "audit.mjs"
+    },
+    {
+      "capability": "Failure handling, approval boundaries and idempotency",
+      "kind": "synthetic-reference",
+      "path": "examples/appointment-intake.md"
+    },
+    {
+      "capability": "Trades lead/quote/job/invoice workflow design",
+      "kind": "synthetic-reference",
+      "path": "examples/trades-operations-assistant.md"
+    },
+    {
+      "capability": "Reusable workflow handoff contract",
+      "kind": "public-source",
+      "path": "workflow-template.md"
+    },
+    {
+      "capability": "Regression validation",
+      "kind": "public-source",
+      "path": "test.mjs"
+    },
+    {
+      "capability": "Plugin packaging preflight",
+      "kind": "public-source",
+      "path": "validate-plugin.mjs"
+    }
+  ],
+  "commercial": {
+    "fixed_scope_audit_aud": 149,
+    "implementation": "quoted after API/auth/data-boundary/acceptance-test discovery",
+    "excludes": [
+      "third-party usage fees",
+      "paid API plans",
+      "unbounded revisions",
+      "24/7 support"
+    ]
+  },
+  "safety": [
+    "No secrets in public issues or project notes",
+    "Explicit approval for consequential writes",
+    "No permission broadening merely to make a workflow pass",
+    "Synthetic examples are labelled as synthetic"
+  ],
+  "urls": {
+    "homepage": "https://ossabellator.github.io/claude-mcp-workflow-audit/",
+    "proof": "https://ossabellator.github.io/claude-mcp-workflow-audit/proof.html",
+    "repository": "https://github.com/OssaBellator/claude-mcp-workflow-audit"
+  }
+}
