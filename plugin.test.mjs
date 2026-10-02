@@ -6,3 +6,9 @@ if(skill.split('\n').length>500) throw new Error('SKILL.md exceeds recommended s
 for(const s of ['read-first','Never request or reproduce passwords','partial-failure','Human review required','complete useful audit without requiring a purchase']) if(!skill.includes(s)) throw new Error('missing '+s);
 if(manifest.name!=='mcp-workflow-audit') throw new Error('unexpected plugin name');
 console.log('ok - plugin manifest and audit skill contract validated');
+const marketplace=JSON.parse(readFileSync('.claude-plugin/marketplace.json','utf8'));
+if(marketplace.name!=='ossabellator-claude-tools') throw new Error('unexpected marketplace name');
+const entry=marketplace.plugins?.find(x=>x.name==='mcp-workflow-audit');
+if(!entry || entry.source!=='./') throw new Error('marketplace plugin must point at repo root');
+if(manifest.license!=='MIT') throw new Error('plugin license must be explicit');
+console.log('ok - decentralized marketplace manifest validated');
