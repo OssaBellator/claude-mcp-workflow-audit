@@ -1,0 +1,1 @@
+{"name":"claude-mcp-audit","private":true,"type":"module","scripts":{"audit":"node audit.mjs .","test":"node test.mjs"}}
