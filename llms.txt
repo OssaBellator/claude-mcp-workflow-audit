@@ -1,0 +1,36 @@
+# Claude Code & MCP Workflow Audit
+
+> Public, synthetic/open-source evidence and a fixed-scope commercial service for Claude Code, Model Context Protocol (MCP), AI-agent workflow reliability, testing, hardening, and operator handoff.
+
+Canonical site: https://ossabellator.github.io/claude-mcp-workflow-audit/
+Public proof: https://ossabellator.github.io/claude-mcp-workflow-audit/proof.html
+Source: https://github.com/OssaBellator/claude-mcp-workflow-audit
+
+## Services
+
+- Claude Code & MCP Workflow Audit + Hardening: A$149 fixed scope for one primary repository/workspace.
+- Custom workflow implementation: quoted separately after scope is established.
+- Team training and enablement: custom engagement based on the public six-session AI workflow curriculum.
+
+## What the public proof demonstrates
+
+- read-first inventory of MCP servers, tools, skills, hooks, scheduled tasks, and automation ownership;
+- tool and credential boundary review;
+- bounded consequential-write modes and explicit approvals;
+- idempotency and duplicate-side-effect protection;
+- failure recovery when an external write succeeds but confirmation fails;
+- representative happy-path, missing-data, permission, and recovery tests;
+- verification evidence and operator handoff documentation;
+- synthetic business-workflow examples and a six-session training curriculum.
+
+## Important boundaries
+
+The examples are synthetic/open-source methodology, not customer deployments. Do not send secrets, credentials, private repository contents, customer data, recovery phrases, private keys, or other sensitive information through public issues.
+
+## Key public artifacts
+
+- Training curriculum: https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/examples/ai-workflow-training-curriculum.md
+- Appointment intake: https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/examples/appointment-intake.md
+- Trades operations assistant: https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/examples/trades-operations-assistant.md
+- Retail master pricing: https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/examples/retail-master-pricing.md
+- Workflow template: https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/workflow-template.md
