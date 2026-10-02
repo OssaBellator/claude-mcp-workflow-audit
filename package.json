@@ -5,20 +5,39 @@
   "type": "module",
   "bin": {
     "claude-mcp-audit": "./audit.mjs",
-    "claude-mcp-report": "./report.mjs"
+    "claude-mcp-report": "./report.mjs",
+    "claude-mcp-new-workflow": "./new-workflow.mjs"
   },
-  "files": ["audit.mjs", "report.mjs", "README.md", "workflow-contract.md", "example-audit.md"],
+  "files": [
+    "audit.mjs",
+    "report.mjs",
+    "README.md",
+    "workflow-contract.md",
+    "example-audit.md",
+    "new-workflow.mjs",
+    "workflow-template.md"
+  ],
   "scripts": {
     "audit": "node audit.mjs .",
     "report": "node report.mjs .",
-    "test": "node test.mjs"
+    "test": "node test.mjs",
+    "new-workflow": "node new-workflow.mjs"
   },
-  "keywords": ["claude-code", "mcp", "model-context-protocol", "ai-agents", "audit", "automation"],
+  "keywords": [
+    "claude-code",
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "audit",
+    "automation"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OssaBellator/claude-mcp-workflow-audit.git"
   },
   "homepage": "https://ossabellator.github.io/claude-mcp-workflow-audit/",
-  "engines": {"node": ">=20"}
+  "engines": {
+    "node": ">=20"
+  }
 }
