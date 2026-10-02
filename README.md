@@ -44,6 +44,16 @@ node test.mjs
 
 If the scan finds a setup that needs hands-on cleanup, the fixed-scope audit + hardening service is available at the booking link below.
 
+## Workflow implementation template
+
+Current Claude/MCP implementation work often needs the same bounded deliverables: tool sequencing, structured outputs, missing/conflicting-data handling, synthetic tests, configurable settings, and maintenance handoff. Generate a starting contract with:
+
+```bash
+node new-workflow.mjs "Daily Operations Brief"
+```
+
+The reusable source template is `workflow-template.md`. It deliberately requires explicit approval before consequential writes and treats missing data as something to disclose rather than invent.
+
 ## Service
 
 I offer a fixed-scope audit + hardening pass for one existing Claude Code, MCP, or AI-agent workspace for **A$149**.
