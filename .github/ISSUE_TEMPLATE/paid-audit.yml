@@ -1,0 +1,53 @@
+name: Paid audit intake
+description: Start a booked Claude/MCP audit without sharing secrets
+title: "[Audit intake] "
+labels: ["audit-intake"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this only for non-sensitive project context. **Do not paste API keys, passwords, tokens, private repository contents, customer data, recovery codes, or other secrets.** If access to private material is needed, it will be handled separately after scope is confirmed.
+  - type: input
+    id: payment
+    attributes:
+      label: Payment reference
+      description: A non-sensitive Stripe receipt/invoice identifier if available. Do not paste card or bank details.
+      placeholder: Receipt or invoice reference
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What should work better?
+      description: Describe the operational problem or unreliable workflow in plain language.
+    validations:
+      required: true
+  - type: textarea
+    id: stack
+    attributes:
+      label: Current Claude/MCP setup
+      description: List relevant tools, MCP servers, skills, hooks, scheduled tasks, or integrations. Names only; no credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: repo
+    attributes:
+      label: Public repository or reproducible example
+      description: Optional. If the real repository is private, provide a public-safe reproduction or leave this blank.
+  - type: dropdown
+    id: writes
+    attributes:
+      label: Does the workflow perform consequential writes?
+      options:
+        - "No / read-only"
+        - "Yes — messages, records, deployments, payments, deletions, or permission changes"
+        - "Unsure"
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I have not included secrets, credentials, private customer data, or other sensitive information in this issue.
+          required: true
