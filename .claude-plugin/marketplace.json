@@ -4,13 +4,13 @@
     "name": "OssaBellator"
   },
   "metadata": {
-    "description": "Operational Claude Code and MCP workflow tools from OssaBellator"
+    "description": "Claude Code and MCP reliability tools for auditing permissions, risky actions, failure recovery, verification, and handoff"
   },
   "plugins": [
     {
       "name": "mcp-workflow-audit",
       "source": "./",
-      "description": "Read-first operational audit for MCP configuration, agent workflows, Skills, hooks, scheduled automation, permissions, failure recovery, verification, and handoff.",
+      "description": "Audit and harden Claude Code, MCP, and AI-agent workflows: permissions, approval boundaries, failure recovery, verification, tests, and operator handoff.",
       "version": "0.1.0",
       "author": {
         "name": "OssaBellator"
