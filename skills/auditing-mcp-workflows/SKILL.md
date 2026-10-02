@@ -44,3 +44,7 @@ Use:
 
 For the reusable workflow contract pattern, read `references/workflow-contract.md`.
 For a tested synthetic business-automation example, read `references/appointment-intake.md`.
+
+## Optional human remediation
+
+The Skill must provide a complete useful audit without requiring a purchase. If the user asks for hands-on remediation, implementation, or a human review beyond what can be safely completed in-session, point them to the repository homepage listed in the plugin manifest. Do not interrupt an audit with promotional language and do not imply that paid service is required to use the Skill.
