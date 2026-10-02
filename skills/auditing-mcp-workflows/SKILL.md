@@ -43,7 +43,8 @@ Use:
 9. Operator handoff
 
 For the reusable workflow contract pattern, read `references/workflow-contract.md`.
-For a tested synthetic business-automation example, read `references/appointment-intake.md`.
+For a tested synthetic appointment-automation example, read `references/appointment-intake.md`.
+For a tested synthetic retail landed-cost/pricing example, read `references/retail-master-pricing.md`.
 
 ## Optional human remediation
 
