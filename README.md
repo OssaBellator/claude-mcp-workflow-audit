@@ -60,6 +60,17 @@ The reusable source template is `workflow-template.md`. It deliberately requires
 
 Its contract test runs with `npm test` so the documented safety and recovery boundaries cannot disappear silently.
 
+## Install in Claude Code
+
+The repository is a decentralized Claude Code marketplace, so it can be installed without waiting for a central directory review:
+
+```text
+/plugin marketplace add OssaBellator/claude-mcp-workflow-audit
+/plugin install mcp-workflow-audit@ossabellator-claude-tools
+```
+
+Review the source before installation. The bundled audit Skill is read-first and the deterministic scanner reads target files without mutating the target workspace.
+
 ## Claude plugin / Agent Skill
 
 This repository also packages the audit methodology as a Claude plugin with the `auditing-mcp-workflows` Agent Skill. The Skill is read-first, uses the deterministic scanner as a heuristic, and separates observed evidence from human review.
