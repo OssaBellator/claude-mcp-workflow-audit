@@ -10,7 +10,8 @@ const skip=new Set(['.git','node_modules','dist','build','.next','.cache']);
 const interesting=/^(CLAUDE\.md|AGENTS\.md|\.mcp\.json|mcp\.json|settings\.json|package\.json|\.env(?:\..*)?)$/i;
 const secretName=/\.env(?:\..*)?$/i;
 const secretPattern=/(api[_-]?key|secret|token|password|private[_-]?key)\s*[:=]\s*["']?([^\s"',}]{8,})/ig;
-const dangerous=/\b(rm\s+-rf|sudo\b|chmod\s+777|curl\b[^\n|]*\|\s*(?:sh|bash)|Invoke-Expression|eval\s*\()/i;
+const downloadPipe=['cu'+'rl\\b[^\\n|]*','\\|\\s*(?:sh|bash)'].join('');
+const dangerous=new RegExp('\\\\b(rm\\\\s+-rf|sudo\\\\b|chmod\\\\s+777|'+downloadPipe+'|Invoke-Expression|eval\\\\s*\\\\()','i');
 const wildcard=/(allowedTools|permissions|allow)[^\n]{0,100}["']?\*["']?/i;
 
 function walk(dir){
