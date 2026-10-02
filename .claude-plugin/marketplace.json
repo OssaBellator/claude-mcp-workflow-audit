@@ -1,0 +1,22 @@
+{
+  "name": "ossabellator-claude-tools",
+  "owner": {
+    "name": "OssaBellator"
+  },
+  "metadata": {
+    "description": "Operational Claude Code and MCP workflow tools from OssaBellator"
+  },
+  "plugins": [
+    {
+      "name": "mcp-workflow-audit",
+      "source": "./",
+      "description": "Read-first operational audit for MCP configuration, agent workflows, Skills, hooks, scheduled automation, permissions, failure recovery, verification, and handoff.",
+      "version": "0.1.0",
+      "author": {
+        "name": "OssaBellator"
+      },
+      "category": "development",
+      "homepage": "https://ossabellator.github.io/claude-mcp-workflow-audit/"
+    }
+  ]
+}
