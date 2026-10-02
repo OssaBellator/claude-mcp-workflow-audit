@@ -28,6 +28,14 @@ node audit.mjs /path/to/workspace
 
 It flags possible committed environment files or credential-like values, wildcard permissions, dangerous command patterns, and MCP command configurations worth reviewing. Findings are heuristics, not proof of a vulnerability. Review every result before acting.
 
+Generate a Markdown operational report with:
+
+```bash
+node report.mjs /path/to/workspace > audit-report.md
+```
+
+A synthetic example deliverable is included in `example-audit.md`. The report deliberately separates static evidence from judgments that require a human, such as workflow value and approval boundaries.
+
 Run the synthetic regression test with:
 
 ```bash
