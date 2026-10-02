@@ -20,12 +20,19 @@
     "estimate-scope.mjs",
     "implementation-scope.md",
     "examples/appointment-intake.md",
-    "examples/appointment-intake.test.mjs"
+    "examples/appointment-intake.test.mjs",
+    ".claude-plugin/plugin.json",
+    "skills/auditing-mcp-workflows/SKILL.md",
+    "skills/auditing-mcp-workflows/evals.json",
+    "skills/auditing-mcp-workflows/references/workflow-contract.md",
+    "skills/auditing-mcp-workflows/references/appointment-intake.md",
+    "skills/auditing-mcp-workflows/scripts/audit.mjs",
+    "plugin.test.mjs"
   ],
   "scripts": {
     "audit": "node audit.mjs .",
     "report": "node report.mjs .",
-    "test": "node test.mjs && node examples/appointment-intake.test.mjs",
+    "test": "node test.mjs && node examples/appointment-intake.test.mjs && node plugin.test.mjs",
     "new-workflow": "node new-workflow.mjs",
     "estimate-scope": "node estimate-scope.mjs"
   },
