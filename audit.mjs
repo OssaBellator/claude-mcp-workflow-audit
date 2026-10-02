@@ -5,6 +5,7 @@ import path from 'node:path';
 const root=path.resolve(process.argv[2]||'.');
 const maxBytes=512*1024;
 const findings=[];
+const inventory={instructions:[],mcpConfigs:[],envFiles:[],automationFiles:[],packageFiles:[]};
 const skip=new Set(['.git','node_modules','dist','build','.next','.cache']);
 const interesting=/^(CLAUDE\.md|AGENTS\.md|\.mcp\.json|mcp\.json|settings\.json|package\.json|\.env(?:\..*)?)$/i;
 const secretName=/\.env(?:\..*)?$/i;
@@ -42,5 +43,9 @@ try{walk(root)}catch(e){console.error('audit failed:',e.message);process.exit(2)
 const rank={high:0,medium:1,low:2};
 findings.sort((a,b)=>rank[a.severity]-rank[b.severity]||a.file.localeCompare(b.file));
 const counts={high:0,medium:0,low:0}; for(const f of findings) counts[f.severity]++;
-console.log(JSON.stringify({root,summary:{filesFlagged:new Set(findings.map(f=>f.file)).size,findings:findings.length,...counts},findings},null,2));
+const recommendations=[];
+if(!inventory.instructions.length) recommendations.push('No CLAUDE.md or AGENTS.md found; consider repository-specific operating instructions.');
+if(inventory.mcpConfigs.length) recommendations.push('Review each MCP server for provenance, least-privilege scopes, credential boundaries, and recovery behavior.');
+if(inventory.automationFiles.length) recommendations.push('Exercise recurring automation failure paths and document retry/approval behavior.');
+console.log(JSON.stringify({root,summary:{filesFlagged:new Set(findings.map(f=>f.file)).size,findings:findings.length,...counts},inventory,recommendations,findings},null,2));
 process.exit(counts.high?1:0);
