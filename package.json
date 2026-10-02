@@ -6,7 +6,8 @@
   "bin": {
     "claude-mcp-audit": "./audit.mjs",
     "claude-mcp-report": "./report.mjs",
-    "claude-mcp-new-workflow": "./new-workflow.mjs"
+    "claude-mcp-new-workflow": "./new-workflow.mjs",
+    "claude-mcp-estimate-scope": "./estimate-scope.mjs"
   },
   "files": [
     "audit.mjs",
@@ -15,13 +16,16 @@
     "workflow-contract.md",
     "example-audit.md",
     "new-workflow.mjs",
-    "workflow-template.md"
+    "workflow-template.md",
+    "estimate-scope.mjs",
+    "implementation-scope.md"
   ],
   "scripts": {
     "audit": "node audit.mjs .",
     "report": "node report.mjs .",
     "test": "node test.mjs",
-    "new-workflow": "node new-workflow.mjs"
+    "new-workflow": "node new-workflow.mjs",
+    "estimate-scope": "node estimate-scope.mjs"
   },
   "keywords": [
     "claude-code",
