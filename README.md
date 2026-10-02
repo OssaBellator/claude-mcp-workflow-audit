@@ -17,6 +17,25 @@ A small public example of how I approach an existing Claude Code / MCP environme
 
 A reusable workflow should state its trigger, required inputs, allowed tools, sequencing rules, output schema, failure behavior, verification checks, and human-approval boundary. See `workflow-contract.md`.
 
+
+## Free local audit tool
+
+This repository includes a dependency-free static scanner for common Claude/MCP configuration risks. It reads local configuration/text files only; it does not call external services or modify the target workspace.
+
+```bash
+node audit.mjs /path/to/workspace
+```
+
+It flags possible committed environment files or credential-like values, wildcard permissions, dangerous command patterns, and MCP command configurations worth reviewing. Findings are heuristics, not proof of a vulnerability. Review every result before acting.
+
+Run the synthetic regression test with:
+
+```bash
+node test.mjs
+```
+
+If the scan finds a setup that needs hands-on cleanup, the fixed-scope audit + hardening service is available at the booking link below.
+
 ## Service
 
 I offer a fixed-scope audit + hardening pass for one existing Claude Code, MCP, or AI-agent workspace for **A$149**.
