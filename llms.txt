@@ -4,6 +4,7 @@
 
 Canonical site: https://ossabellator.github.io/claude-mcp-workflow-audit/
 Public proof: https://ossabellator.github.io/claude-mcp-workflow-audit/proof.html
+Team training: https://ossabellator.github.io/claude-mcp-workflow-audit/training.html
 Source: https://github.com/OssaBellator/claude-mcp-workflow-audit
 
 ## Services
