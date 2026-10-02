@@ -32,7 +32,8 @@
     "LICENSE",
     "validate-plugin.mjs",
     "examples/trades-operations-assistant.md",
-    ".claude-plugin/marketplace.json"
+    ".claude-plugin/marketplace.json",
+    "capabilities.json"
   ],
   "scripts": {
     "audit": "node audit.mjs .",
