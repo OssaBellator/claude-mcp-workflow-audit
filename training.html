@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hands-on AI Workflow & MCP Team Training — Six Sessions</title>
+  <meta name="description" content="Six-session hands-on AI workflow training for small teams: workflow contracts, APIs/JSON, MCP, orchestration, failure testing, and operator handoff.">
+  <link rel="canonical" href="https://ossabellator.github.io/claude-mcp-workflow-audit/training.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hands-on AI Workflow & MCP Team Training — Six Sessions">
+  <meta property="og:description" content="A practical six-session program where each participant turns a real business process into a bounded, tested AI-assisted workflow.">
+  <meta property="og:url" content="https://ossabellator.github.io/claude-mcp-workflow-audit/training.html">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Hands-on AI Workflow & MCP Team Training",
+    "description": "Six-session hands-on training for small teams covering workflow contracts, APIs and JSON, MCP tool connections, orchestration, failure testing, and operator handoff.",
+    "url": "https://ossabellator.github.io/claude-mcp-workflow-audit/training.html",
+    "provider": {
+      "@type": "Person",
+      "name": "OssaBellator",
+      "url": "https://github.com/OssaBellator"
+    },
+    "educationalLevel": "Practical technical training",
+    "numberOfCredits": 0
+  }
+  </script>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#151515;background:#f7f6f2}
+    body{margin:0}.wrap{max-width:900px;margin:auto;padding:56px 24px 80px}.card{background:#fff;border:1px solid #dedbd2;border-radius:18px;padding:34px;box-shadow:0 12px 40px rgba(0,0,0,.05)}
+    h1{font-size:clamp(2.1rem,6vw,4rem);line-height:1.02;margin:.15em 0 .4em;letter-spacing:-.035em}h2{margin-top:34px}.lead{font-size:1.2rem;line-height:1.55;max-width:760px}
+    .eyebrow{font-weight:750;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}.box{border:1px solid #e8e5dc;border-radius:14px;padding:18px;background:#fcfbf8}
+    li{margin:.55em 0;line-height:1.5}.cta{display:inline-block;margin:14px 0;padding:14px 20px;border-radius:12px;background:#111;color:#fff;text-decoration:none;font-weight:750}.muted{color:#626262}.fine{font-size:.92rem;color:#5c5c5c;line-height:1.5;margin-top:28px}a{color:inherit}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <div class="card">
+    <div class="eyebrow">Small-team AI enablement</div>
+    <h1>Build real AI workflows, not canned demos.</h1>
+    <p class="lead">A six-session, hands-on program for teams that want to understand and operate practical AI-assisted workflows. Each participant brings one real process from their work and develops it from a bounded workflow contract through tool connection, testing, recovery, and operator handoff.</p>
+
+    <h2>Program outcome</h2>
+    <p>By the final session, each participant should have a working bounded workflow or an evidence-backed prototype, a representative test set, and a short runbook describing how to operate, recover, and safely extend it.</p>
+
+    <h2>Six-session structure</h2>
+    <div class="grid">
+      <div class="box"><strong>1. Make the workflow testable</strong><br>Choose one useful process; define trigger, inputs, systems of record, allowed tools, output, approval boundary, acceptance tests, and recovery.</div>
+      <div class="box"><strong>2. APIs, JSON & business data</strong><br>Work with structured data, webhooks, files/CSV, authentication concepts, missing data, and predictable output schemas.</div>
+      <div class="box"><strong>3. MCP & tool-connected agents</strong><br>Connect one approved tool, inspect scopes, run read operations, preserve source traceability, and diagnose permission or missing-data failures.</div>
+      <div class="box"><strong>4. Multi-step orchestration</strong><br>Sequence steps, add branching, duplicate protection, schedules or event triggers, and explicit human approval before consequential writes.</div>
+      <div class="box"><strong>5. Break it before production does</strong><br>Test happy paths, missing sources, duplicates, denied permissions, partial failure, unknown write outcomes, and unsafe retry assumptions.</div>
+      <div class="box"><strong>6. Operate & hand off</strong><br>Run the final workflow, verify results, document ownership/scopes, create disable and recovery procedures, and define the next-step backlog.</div>
+    </div>
+
+    <h2>How live sessions work</h2>
+    <ul>
+      <li>Short concept and demonstration block.</li>
+      <li>Guided build time on each participant's own process.</li>
+      <li>Group review of failures, edge cases, and trade-offs.</li>
+      <li>A concrete acceptance check and next-step assignment before the session ends.</li>
+    </ul>
+    <p>For a cohort of roughly 6-7 participants, 90-120 minute sessions provide enough room for real implementation rather than slide-only instruction. Exact timing and tooling should be adapted to participant skill level and project complexity.</p>
+
+    <h2>Topics the program can cover</h2>
+    <p>Claude and other LLMs, AI agents, MCP, APIs, JSON, webhooks, structured outputs, file/spreadsheet workflows, n8n or comparable orchestration, approval gates, idempotency, bounded retries, verification, testing, and operator handoff.</p>
+
+    <h2>What this is not</h2>
+    <p>This is not a promise that every participant project can safely reach production in six sessions. Projects that need production credentials, custom API development, paid third-party services, data migration, security review, or substantial engineering are kept in prototype/read-only mode until those dependencies are separately scoped.</p>
+
+    <h2>Public evidence</h2>
+    <p>The teaching architecture is published openly so it can be inspected before an engagement. The examples are synthetic/open-source methodology, not customer deployments or claims of prior paid training engagements.</p>
+    <ul>
+      <li><a href="https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/examples/ai-workflow-training-curriculum.md">Full six-session curriculum</a></li>
+      <li><a href="./proof.html">Claude/MCP workflow proof page</a></li>
+      <li><a href="https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/examples/appointment-intake.md">Tested appointment-intake workflow</a></li>
+      <li><a href="https://github.com/OssaBellator/claude-mcp-workflow-audit/blob/main/workflow-template.md">Workflow implementation template</a></li>
+    </ul>
+
+    <h2>Custom team engagement</h2>
+    <p>Team size, participant background, systems, desired tooling, and project complexity determine the final delivery plan and quote. The fixed A$149 workspace audit on the main page is a separate service and does not include this training program.</p>
+    <a class="cta" href="https://github.com/OssaBellator/claude-mcp-workflow-audit/issues/new?template=scope-question.yml">Ask a non-sensitive training scope question</a>
+    <p class="muted"><a href="./">Back to the Claude/MCP audit service</a></p>
+
+    <p class="fine">Do not post credentials, private customer data, proprietary code, API keys, tokens, private keys, or other confidential information in public GitHub issues. Commercial scope and private-access handling should be agreed separately.</p>
+  </div>
+</main>
+</body>
+</html>
