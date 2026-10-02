@@ -128,6 +128,8 @@ The engagement is designed for setups that already work but have become messy, f
 
 Payment / booking: https://buy.stripe.com/9B600d9Mocei2RV8c104801
 
+Prefer to contract through Upwork: https://www.upwork.com/freelancers/~01fa363b7b5fea3801
+
 No passwords, private keys, recovery phrases, production customer data, or other sensitive credentials should be sent through project notes or chat.
 
 ## Agent Skills CLI
