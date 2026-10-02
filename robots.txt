@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ossabellator.github.io/claude-mcp-workflow-audit/sitemap.xml
