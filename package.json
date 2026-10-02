@@ -35,7 +35,8 @@
     ".claude-plugin/marketplace.json",
     "capabilities.json",
     "examples/retail-master-pricing.md",
-    "examples/retail-master-pricing.test.mjs"
+    "examples/retail-master-pricing.test.mjs",
+    "skills/auditing-mcp-workflows/references/retail-master-pricing.md"
   ],
   "scripts": {
     "audit": "node audit.mjs .",
