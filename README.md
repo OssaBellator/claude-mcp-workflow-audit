@@ -106,6 +106,16 @@ It includes three evaluation scenarios covering credential/consequential-action 
 
 The plugin source is under `.claude-plugin/` and `skills/auditing-mcp-workflows/`.
 
+## Try the Skill
+
+After installing the plugin, these prompts exercise the core audit workflow:
+
+1. `Audit this Claude Code workspace for risky permissions, duplicate MCP configuration, missing verification, and weak failure recovery. Do not change anything; separate observed evidence from recommendations.`
+2. `Review this MCP-connected workflow for consequential writes, approval boundaries, idempotency, bounded retries, partial-failure recovery, and operator handoff. Give me a verification plan before proposing fixes.`
+3. `Audit this agent workflow as if another operator must maintain it tomorrow. Identify unclear credentials/permissions, missing-data behavior, unsafe retry assumptions, tests that are missing, and the minimum bounded fixes.`
+
+For problems with installation, scanner behavior, documentation, or a suspected security issue, open a GitHub issue in this repository with a minimal reproducible example. Do not include credentials, private customer data, or other secrets.
+
 ## Service
 
 I offer a fixed-scope audit + hardening pass for one existing Claude Code, MCP, or AI-agent workspace for **A$149**.
