@@ -67,6 +67,10 @@ node new-workflow.mjs "Daily Operations Brief"
 
 The reusable source template is `workflow-template.md`. It deliberately requires explicit approval before consequential writes and treats missing data as something to disclose rather than invent.
 
+## Public training curriculum
+
+`examples/ai-workflow-training-curriculum.md` lays out a six-session, hands-on program for small teams where each participant builds a bounded AI-assisted workflow from contract through testing and operator handoff. It is a proposed teaching architecture and is explicitly **not** represented as prior customer training work.
+
 ## Synthetic business-workflow reference
 
 `examples/appointment-intake.md` shows a production-oriented appointment workflow contract: calendar availability reads, approval/bounded-write modes, duplicate protection, partial-failure recovery, confirmation behavior, verification evidence, and handoff requirements. It is synthetic proof of the methodology, not a customer deployment.

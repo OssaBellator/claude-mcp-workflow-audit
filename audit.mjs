@@ -11,7 +11,7 @@ const interesting=/^(CLAUDE\.md|AGENTS\.md|\.mcp\.json|mcp\.json|settings\.json|
 const secretName=/\.env(?:\..*)?$/i;
 const secretPattern=/(api[_-]?key|secret|token|password|private[_-]?key)\s*[:=]\s*["']?([^\s"',}]{8,})/ig;
 const downloadPipe=['cu'+'rl\\b[^\\n|]*','\\|\\s*(?:sh|bash)'].join('');
-const dangerous=new RegExp('\\\\b(rm\\\\s+-rf|sudo\\\\b|chmod\\\\s+777|'+downloadPipe+'|Invoke-Expression|eval\\\\s*\\\\()','i');
+const dangerous=new RegExp('\\b(rm\\s+-rf|sudo\\b|chmod\\s+777|'+downloadPipe+'|Invoke-Expression|eval\\s*\\()','i');
 const wildcard=/(allowedTools|permissions|allow)[^\n]{0,100}["']?\*["']?/i;
 
 function walk(dir){
