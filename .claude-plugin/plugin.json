@@ -6,5 +6,7 @@
     "name": "OssaBellator"
   },
   "homepage": "https://ossabellator.github.io/claude-mcp-workflow-audit/",
-  "repository": "https://github.com/OssaBellator/claude-mcp-workflow-audit"
+  "repository": "https://github.com/OssaBellator/claude-mcp-workflow-audit",
+  "license": "MIT",
+  "displayName": "MCP Workflow Audit"
 }
