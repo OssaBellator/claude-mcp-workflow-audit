@@ -18,12 +18,14 @@
     "new-workflow.mjs",
     "workflow-template.md",
     "estimate-scope.mjs",
-    "implementation-scope.md"
+    "implementation-scope.md",
+    "examples/appointment-intake.md",
+    "examples/appointment-intake.test.mjs"
   ],
   "scripts": {
     "audit": "node audit.mjs .",
     "report": "node report.mjs .",
-    "test": "node test.mjs",
+    "test": "node test.mjs && node examples/appointment-intake.test.mjs",
     "new-workflow": "node new-workflow.mjs",
     "estimate-scope": "node estimate-scope.mjs"
   },
