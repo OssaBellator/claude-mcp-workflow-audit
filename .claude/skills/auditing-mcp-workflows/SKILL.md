@@ -12,7 +12,7 @@ Perform a read-first operational audit. Do not modify the target workspace unles
 1. Establish the target workspace and intended business outcome.
 2. Inventory agent instructions, MCP configuration, Skills, hooks, scheduled/recurring automation, package metadata, and credential-boundary files.
 3. Run the bundled deterministic scanner when Node.js is available:
-   `node scripts/audit.mjs <target>`
+   `node "${CLAUDE_PLUGIN_ROOT}/skills/auditing-mcp-workflows/scripts/audit.mjs" <target>`
 4. Treat scanner findings as heuristics, not proof of a vulnerability.
 5. Map consequential actions: external writes, messages, deployments, purchases, deletions, permission changes, and scheduled actions.
 6. Review least privilege, credential storage, duplicate/obsolete configuration, bounded retries, idempotency, missing/conflicting-data behavior, and recovery.
