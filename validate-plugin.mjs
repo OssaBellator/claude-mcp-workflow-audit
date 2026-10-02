@@ -19,7 +19,8 @@ if(!errors.length){
  if(!/^---\r?\n[\s\S]*?\r?\n---/m.test(skill)) errors.push('Skill missing YAML frontmatter');
  if(!/^name:\s*auditing-mcp-workflows\s*$/m.test(skill)) errors.push('Skill frontmatter missing expected name');
  if(!/^description:\s*.+$/m.test(skill)) errors.push('Skill frontmatter missing description');
- for(const rel of ['references/workflow-contract.md','references/appointment-intake.md','scripts/audit.mjs']){
+ for(const rel of ['references/workflow-contract.md','references/appointment-intake.md',
+  'references/retail-master-pricing.md','scripts/audit.mjs']){
   if(!existsSync(path.join(root,'skills/auditing-mcp-workflows',rel))) errors.push('Skill references missing '+rel);
  }
 }
