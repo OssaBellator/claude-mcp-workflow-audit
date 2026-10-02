@@ -60,6 +60,14 @@ The reusable source template is `workflow-template.md`. It deliberately requires
 
 Its contract test runs with `npm test` so the documented safety and recovery boundaries cannot disappear silently.
 
+## Claude plugin / Agent Skill
+
+This repository also packages the audit methodology as a Claude plugin with the `auditing-mcp-workflows` Agent Skill. The Skill is read-first, uses the deterministic scanner as a heuristic, and separates observed evidence from human review.
+
+It includes three evaluation scenarios covering credential/consequential-action boundaries, partial-failure/idempotency behavior, and the distinction between static findings and runtime proof.
+
+The plugin source is under `.claude-plugin/` and `skills/auditing-mcp-workflows/`.
+
 ## Service
 
 I offer a fixed-scope audit + hardening pass for one existing Claude Code, MCP, or AI-agent workspace for **A$149**.
