@@ -1,0 +1,10 @@
+{
+  "name": "mcp-workflow-audit",
+  "version": "0.1.0",
+  "description": "Read-first operational audit methodology for MCP, agent workflows, Skills, hooks, and recurring automation.",
+  "author": {
+    "name": "OssaBellator"
+  },
+  "homepage": "https://ossabellator.github.io/claude-mcp-workflow-audit/",
+  "repository": "https://github.com/OssaBellator/claude-mcp-workflow-audit"
+}
