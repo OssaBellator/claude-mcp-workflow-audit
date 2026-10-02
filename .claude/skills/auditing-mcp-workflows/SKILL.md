@@ -1,6 +1,6 @@
 ---
 name: auditing-mcp-workflows
-description: Audits an existing AI coding or agent workspace for MCP configuration, instructions, hooks, scheduled automation, credential boundaries, dangerous command patterns, failure handling, verification, and operator handoff. Use when reviewing Claude Code, MCP, agent workflows, Skills, hooks, or recurring automations for operational reliability and safe hardening.
+description: Use when a Claude Code, MCP, or AI-agent workflow is fragile, has unclear write permissions, risks duplicate side effects, lacks failure recovery or verification, or needs an operator handoff. Audit configuration, action boundaries, permissions, idempotency, recovery, tests, and maintainability before changing the workspace.
 ---
 
 # Auditing MCP workflows
