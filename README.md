@@ -18,6 +18,19 @@ A small public example of how I approach an existing Claude Code / MCP environme
 A reusable workflow should state its trigger, required inputs, allowed tools, sequencing rules, output schema, failure behavior, verification checks, and human-approval boundary. See `workflow-contract.md`.
 
 
+## Quick start with npx
+
+After the package is published to npm, the intended commands are:
+
+```bash
+npx --yes claude-mcp-audit /path/to/workspace
+npx --yes --package claude-mcp-audit claude-mcp-report /path/to/workspace
+npx --yes --package claude-mcp-audit claude-mcp-new-workflow "Daily Operations Brief"
+npx --yes --package claude-mcp-audit claude-mcp-estimate-scope workflows=2 integrations=3 writes=approval tests=6 scheduled=true
+```
+
+Until npm publication, clone the repository and use the local Node commands below.
+
 ## Free local audit tool
 
 This repository includes a dependency-free static scanner for common Claude/MCP configuration risks. It reads local configuration/text files only; it does not call external services or modify the target workspace.
