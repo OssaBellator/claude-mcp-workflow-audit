@@ -36,7 +36,7 @@
   "scripts": {
     "audit": "node audit.mjs .",
     "report": "node report.mjs .",
-    "test": "node test.mjs && node examples/appointment-intake.test.mjs && node plugin.test.mjs",
+    "test": "node validate-plugin.mjs && node test.mjs && node examples/appointment-intake.test.mjs && node plugin.test.mjs",
     "new-workflow": "node new-workflow.mjs",
     "estimate-scope": "node estimate-scope.mjs",
     "acquisition-baseline": "node acquisition-baseline.mjs",
