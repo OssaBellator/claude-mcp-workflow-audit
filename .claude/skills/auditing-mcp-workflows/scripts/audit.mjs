@@ -10,8 +10,8 @@ const skip=new Set(['.git','node_modules','dist','build','.next','.cache']);
 const interesting=/^(CLAUDE\.md|AGENTS\.md|\.mcp\.json|mcp\.json|settings\.json|package\.json|\.env(?:\..*)?)$/i;
 const secretName=/\.env(?:\..*)?$/i;
 const secretPattern=/(api[_-]?key|secret|token|password|private[_-]?key)\s*[:=]\s*["']?([^\s"',}]{8,})/ig;
-const downloadPipe=['cu'+'rl\\b[^\\n|]*','\\|\\s*(?:sh|bash)'].join('');
-const dangerous=new RegExp('\\\\b(rm\\\\s+-rf|sudo\\\\b|chmod\\\\s+777|'+downloadPipe+'|Invoke-Expression|eval\\\\s*\\\\()','i');
+const downloadPipe=new RegExp(['cu'+'rl\\b[^\\n|]*','\\|\\s*(?:sh|bash)'].join(''),'i');
+const dangerousPatterns=[/\brm\s+-rf/i,/\bsudo\b/i,/\bchmod\s+777/i,downloadPipe,/Invoke-Expression/i,/eval\s*\(/i];
 const wildcard=/(allowedTools|permissions|allow)[^\n]{0,100}["']?\*["']?/i;
 
 function walk(dir){
@@ -35,7 +35,7 @@ function inspect(file,name){
     if(!/^(process\.env|\$\{|<|your_|example|changeme|placeholder)/i.test(v))
       add('high',file,'possible-secret','Possible hard-coded credential-like value. Rotate if real; move secrets to an approved credential store.');
   }
-  if(dangerous.test(text)) add('medium',file,'dangerous-command','Potentially destructive or shell-piped command found. Require narrow scope and explicit approval before consequential execution.');
+  if(dangerousPatterns.some(pattern=>pattern.test(text))) add('medium',file,'dangerous-command','Potentially destructive or shell-piped command found. Require narrow scope and explicit approval before consequential execution.');
   if(wildcard.test(text) && (name.toLowerCase()==='claude.md' || name.toLowerCase()==='agents.md' || ['.json','.yaml','.yml','.toml'].includes(path.extname(name).toLowerCase()))) add('medium',file,'wildcard-permission','Possible wildcard tool/permission grant. Prefer least-privilege allowlists.');
   if(/mcpServers/i.test(text) && /"command"\s*:/i.test(text) && !/"args"\s*:/i.test(text))
     add('low',file,'mcp-command-review','MCP command configuration found; review executable provenance, arguments, and credential boundary.');
