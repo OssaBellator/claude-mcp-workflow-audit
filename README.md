@@ -54,6 +54,12 @@ node new-workflow.mjs "Daily Operations Brief"
 
 The reusable source template is `workflow-template.md`. It deliberately requires explicit approval before consequential writes and treats missing data as something to disclose rather than invent.
 
+## Synthetic business-workflow reference
+
+`examples/appointment-intake.md` shows a production-oriented appointment workflow contract: calendar availability reads, approval/bounded-write modes, duplicate protection, partial-failure recovery, confirmation behavior, verification evidence, and handoff requirements. It is synthetic proof of the methodology, not a customer deployment.
+
+Its contract test runs with `npm test` so the documented safety and recovery boundaries cannot disappear silently.
+
 ## Service
 
 I offer a fixed-scope audit + hardening pass for one existing Claude Code, MCP, or AI-agent workspace for **A$149**.
