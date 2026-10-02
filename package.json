@@ -28,7 +28,10 @@
     "skills/auditing-mcp-workflows/references/appointment-intake.md",
     "skills/auditing-mcp-workflows/scripts/audit.mjs",
     "plugin.test.mjs",
-    "acquisition-baseline.mjs"
+    "acquisition-baseline.mjs",
+    "LICENSE",
+    "validate-plugin.mjs",
+    "examples/trades-operations-assistant.md"
   ],
   "scripts": {
     "audit": "node audit.mjs .",
@@ -36,7 +39,8 @@
     "test": "node test.mjs && node examples/appointment-intake.test.mjs && node plugin.test.mjs",
     "new-workflow": "node new-workflow.mjs",
     "estimate-scope": "node estimate-scope.mjs",
-    "acquisition-baseline": "node acquisition-baseline.mjs"
+    "acquisition-baseline": "node acquisition-baseline.mjs",
+    "validate-plugin": "node validate-plugin.mjs"
   },
   "keywords": [
     "claude-code",
