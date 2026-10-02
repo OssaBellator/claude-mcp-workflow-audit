@@ -1,0 +1,46 @@
+name: Scope question
+description: Ask whether your Claude/MCP workflow fits the fixed-scope audit
+title: "[Scope] "
+labels: ["scope-question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for public, non-sensitive scoping only. **Do not include credentials, private code, customer data, internal URLs, or other confidential information.**
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What do you want the Claude/MCP/agent workflow to do more reliably or safely?
+    validations:
+      required: true
+  - type: textarea
+    id: stack
+    attributes:
+      label: Relevant stack
+      description: Names of tools, MCP servers, skills, hooks, scheduled tasks, APIs, or platforms involved. Names only; no credentials.
+    validations:
+      required: true
+  - type: dropdown
+    id: state
+    attributes:
+      label: Current state
+      options:
+        - "Existing setup needs audit/hardening"
+        - "Existing workflow is unreliable"
+        - "New workflow needs design/implementation"
+        - "Unsure"
+    validations:
+      required: true
+  - type: textarea
+    id: public
+    attributes:
+      label: Public reference (optional)
+      description: Link to a public repository or documentation if safe to share.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I have not included secrets, private repository contents, customer data, or other confidential information.
+          required: true
