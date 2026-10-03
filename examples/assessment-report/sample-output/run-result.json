@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "requestId": "sample-business-001",
+  "fingerprint": "b416da239d0ed52a65455f497d1dd3466b76b77169181d73df4d03f8a21e1b9b",
+  "matchedRuleIds": [
+    "manual-overload",
+    "followup-gap"
+  ],
+  "deliveryId": "sample-delivery-001",
+  "verified": true,
+  "deduplicated": false
+}
