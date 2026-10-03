@@ -77,6 +77,24 @@ The reusable source template is `workflow-template.md`. It deliberately requires
 
 Its contract test runs with `npm test` so the documented safety and recovery boundaries cannot disappear silently.
 
+## Executable business-automation references
+
+The repository now includes two runnable, credential-free portfolio examples shaped like ordinary client automation work rather than agent-framework demos:
+
+- [`examples/assessment-report/`](./examples/assessment-report/) â€” questionnaire/webhook input â†’ editable deterministic rules â†’ controlled AI analysis â†’ personalized report â†’ delivery verification â†’ idempotent run record.
+- [`examples/approved-write/`](./examples/approved-write/) â€” webhook intake â†’ current-state read â†’ bounded AI classification â†’ explicit approval â†’ CRM/email writes â†’ read-back verification â†’ partial-failure recovery without duplicate side effects.
+
+Both examples are synthetic and use no customer data. Their tests run in the normal `npm test` gate. The assessment example also includes deterministic sample output so a reviewer can inspect the delivered report and run evidence without external credentials.
+
+These examples are intentionally vendor-neutral. A client-owned production implementation can swap in Typeform/Tally, Anthropic/OpenAI, browser-to-PDF or managed PDF rendering, SES/Postmark/Resend, HubSpot/Zoho/Salesforce, or equivalent services without changing the core validation, approval, idempotency, and verification boundaries.
+
+Run only these examples with:
+
+```bash
+node examples/assessment-report/assessment.test.mjs
+node examples/assessment-report/demo.mjs
+node examples/approved-write/approved-write.test.mjs
+```
 ## Install in Claude Code
 
 The repository is a decentralized Claude Code marketplace, so it can be installed without waiting for a central directory review:
