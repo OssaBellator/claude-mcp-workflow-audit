@@ -1,8 +1,17 @@
-# Claude Code & MCP Workflow Audit
+# AI Automation, Claude Code & MCP Workflow Proof
 
-A small public example of how I approach an existing Claude Code / MCP environment before changing it.
+Public, runnable examples of how I build and harden business automation: webhook/API intake, controlled AI analysis, CRM/email actions, Claude Code/MCP workflows, duplicate protection, failure recovery, verification, tests, and operator handoff.
 
-## Audit sequence
+## Start with the client-style examples
+
+- [Assessment to AI analysis to report delivery](./examples/assessment-report/) — structured intake, editable rules, controlled AI evidence, personalized report generation, idempotency, delivery and verification.
+- [Webhook to approval to CRM/email writes](./examples/approved-write/) — current-state read, bounded AI classification, approval-gated writes, read-back verification and partial-failure recovery without duplicates.
+- [Appointment intake workflow](./examples/appointment-intake.md) — availability, approval modes, duplicate protection, partial-failure recovery and confirmation verification.
+- [Retail master-pricing workflow](./examples/retail-master-pricing.md) — deterministic pricing logic, missing-data handling and approval boundaries.
+
+These are synthetic portfolio artifacts, not claims about prior customer deployments. The executable examples run in the normal CI gate.
+
+## Claude Code / MCP audit sequence
 
 1. Inventory MCP servers, skills, hooks, agent instructions, scheduled tasks, and external integrations.
 2. Map each tool to its credentials, permissions, data boundary, and consequential actions.
@@ -81,8 +90,8 @@ Its contract test runs with `npm test` so the documented safety and recovery bou
 
 The repository now includes two runnable, credential-free portfolio examples shaped like ordinary client automation work rather than agent-framework demos:
 
-- [`examples/assessment-report/`](./examples/assessment-report/) â€” questionnaire/webhook input â†’ editable deterministic rules â†’ controlled AI analysis â†’ personalized report â†’ delivery verification â†’ idempotent run record.
-- [`examples/approved-write/`](./examples/approved-write/) â€” webhook intake â†’ current-state read â†’ bounded AI classification â†’ explicit approval â†’ CRM/email writes â†’ read-back verification â†’ partial-failure recovery without duplicate side effects.
+- [`examples/assessment-report/`](./examples/assessment-report/) — questionnaire/webhook input → editable deterministic rules → controlled AI analysis → personalized report → delivery verification → idempotent run record.
+- [`examples/approved-write/`](./examples/approved-write/) — webhook intake → current-state read → bounded AI classification → explicit approval → CRM/email writes → read-back verification → partial-failure recovery without duplicate side effects.
 
 Both examples are synthetic and use no customer data. Their tests run in the normal `npm test` gate. The assessment example also includes deterministic sample output so a reviewer can inspect the delivered report and run evidence without external credentials.
 
